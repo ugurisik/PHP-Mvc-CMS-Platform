@@ -4,10 +4,14 @@ class controller
 {
     public $mailer;
     public $faker;
+    public $session;
+    public $cookie;
     public function __construct()
     {
         $this->mailer = new phpMail();
         $this->faker = new faker();
+        $this->session = new sessionManager();
+        $this->cookie = new cookieManager();
     }
 
     public function view($file, $param = [] or null)
@@ -17,7 +21,8 @@ class controller
         } else {
             $error = ['error' => $file . " View dosyası bulunamadı!"];
             require_once "app/views/errorPage.php";
-           //exit($file . " View dosyası bulunamadı");
+            exit;
+            //exit($file . " View dosyası bulunamadı");
         }
     }
     public function model($file)
@@ -33,11 +38,13 @@ class controller
             } else {
                 $error = ['error' => $file . " Model dosyasında tanımlı bir class değil!"];
                 require_once "app/views/errorPage.php";
+                exit;
                 // exit($file . " Model dosyasında tanımlı bir class değil!");
             }
         } else {
             $error = ['error' => $file . " Model dosyası bulunamadı!"];
             require_once "app/views/errorPage.php";
+            exit;
             //exit($file . " Model dosyası bulunamadı!");
         }
     }
