@@ -1,36 +1,36 @@
 <?php
-class logs extends model
+
+class lang extends model
 {
     public function getAll()
     {
-        $this->db->orderBy("TransactionDate", "DESC");
-        return $this->db->get("log");
+        return $this->db->get("langs");
     }
     public function getData($id)
     {
-        $this->db->where("ID", $id);
-        return $this->db->getOne("log");
+        $this->db->where("id", $id);
+        return $this->db->getOne("langs");
     }
     public function addData($data)
     {
-        return $this->db->insert("log", $data);
+        return $this->db->insert("langs", $data);
     }
     public function updateData($data, $id)
     {
-        $this->db->where("ID", $id);
-        return $this->db->update("log", $data);
+        $this->db->where("id", $id);
+        return $this->db->update("langs", $data);
     }
     public function deleteData($id)
     {
-        $this->db->where("ID", $id);
-        return $this->db->delete("log");
+        $this->db->where("id", $id);
+        return $this->db->delete("langs");
     }
     public function getWhereConditions($where = [])
     {
         foreach ($where as $key => $value) {
             $this->db->where($key, $value);
         }
-        return $this->db->get("log");
+        return $this->db->get("langs");
     }
     public function rawQuery($query){
         return $this->db->rawQuery($query);
