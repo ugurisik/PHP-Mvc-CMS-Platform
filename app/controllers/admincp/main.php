@@ -1,6 +1,8 @@
-<?php 
-class main{
-    public function index(){
-        echo "Merhaba Admin";
+<?php
+class main extends controller
+{
+    public function index()
+    {
+        $this->view('admin/auth/login');
     }
 }

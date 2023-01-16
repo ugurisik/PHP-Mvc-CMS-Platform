@@ -1,5 +1,5 @@
 <?php
-class main extends controller
+class admincp extends controller
 {
     public function index()
     {

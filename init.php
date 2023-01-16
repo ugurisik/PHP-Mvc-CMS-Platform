@@ -12,4 +12,5 @@ require_once 'app/helpers/mail/phpmailer.php';
 require_once 'app/helpers/faker/faker.php';
 require_once 'app/helpers/session/sessionManager.php';
 require_once 'app/helpers/cookies/cookieManager.php';
-
+require_once 'app/helpers/logs/logManager.php';
+require_once 'app/helpers/security/securityManager.php';

@@ -6,12 +6,16 @@ class controller
     public $faker;
     public $session;
     public $cookie;
+    public $log;
+    public $security;
     public function __construct()
     {
         $this->mailer = new phpMail();
         $this->faker = new faker();
         $this->session = new sessionManager();
         $this->cookie = new cookieManager();
+        $this->log = new logManager();
+        $this->security = new security();
     }
 
     public function view($file, $param = [] or null)

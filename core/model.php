@@ -10,7 +10,7 @@ class model
                 'username' =>   DB_USERNAME,
                 'password' =>   DB_PASSWORD,
                 'db' =>          DB_NAME,
-                'port' =>       3306,
+                'port' =>       DB_PORT,
                 'prefix' =>     DB_PREFIX,
                 'charset' =>    'utf8'
             )
