@@ -63,9 +63,9 @@
 <!--begin::Custom Javascript(used for this page only)-->
 <script src="<?= ADMIN_ASSETS ?>js/widgets.bundle.js"></script>
 <script src="<?= ADMIN_ASSETS ?>js/custom/widgets.js"></script>
-<script src="<?= ADMIN_ASSETS ?>js/custom/apps/chat/chat.js"></script>
-<script src="<?= ADMIN_ASSETS ?>js/custom/utilities/modals/upgrade-plan.js"></script>
-<script src="<?= ADMIN_ASSETS ?>js/custom/utilities/modals/users-search.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<?= ADMIN_ASSETS ?>/orakuploader/orakuploader.js"></script>
+<script src="<?= ADMIN_ASSETS ?>js/main.js"></script>
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
 </body>

@@ -5,18 +5,42 @@
         <div class="card card-flush">
             <!--begin::Card body-->
             <div class="card-body">
+                <div class="row fv-row mb-7">
+                    <div class="col-md-3 text-md-end">
+                        <!--begin::Label-->
+                        <label class="fs-6 fw-semibold form-label mt-3">
+                            <span>Ayar Dili</span>
+                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Site ayarını düzenleyeceğiniz ayar dilini seçiniz."></i>
+                        </label>
+                        <!--end::Label-->
+                    </div>
+                    <div class="col-md-8">
+                        <div class="w-100">
+                            <!--begin::Select2-->
+                            <select class="form-select form-select-solid" name="theme" data-control="select2" data-hide-search="true" data-placeholder="Ayar dili seçiniz!">
+                                <option></option>
+                                <option value="1" selected>Türkçe</option>
+                                <option value="2">İngilizce</option>
+                            </select>
+                            <!--end::Select2-->
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-primary">
+                            Kaydet
+                        </button>
+                    </div>
+                </div>
                 <!--begin:::Tabs-->
                 <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-4 fw-semibold mb-15">
                     <!--begin:::Tab item-->
                     <li class="nav-item">
                         <a class="nav-link text-active-primary pb-5 active" data-bs-toggle="tab" href="#kt_ecommerce_settings_general">
-                            <!--begin::Svg Icon | path: icons/duotune/general/gen001.svg-->
                             <span class="svg-icon svg-icon-2 me-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 2.375L2 9.575V20.575C2 21.175 2.4 21.575 3 21.575H9C9.6 21.575 10 21.175 10 20.575V14.575C10 13.975 10.4 13.575 11 13.575H13C13.6 13.575 14 13.975 14 14.575V20.575C14 21.175 14.4 21.575 15 21.575H21C21.6 21.575 22 21.175 22 20.575V9.575L13 2.375C12.4 1.875 11.6 1.875 11 2.375Z" fill="currentColor" />
                                 </svg>
-                            </span>
-                            <!--end::Svg Icon-->General</a>
+                            </span>Site Ayarları</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -24,18 +48,11 @@
                         <a class="nav-link text-active-primary pb-5" data-bs-toggle="tab" href="#kt_ecommerce_settings_store">
                             <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm004.svg-->
                             <span class="svg-icon svg-icon-2 me-2">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.3" d="M18 10V20C18 20.6 18.4 21 19 21C19.6 21 20 20.6 20 20V10H18Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M11 10V17H6V10H4V20C4 20.6 4.4 21 5 21H12C12.6 21 13 20.6 13 20V10H11Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M10 10C10 11.1 9.1 12 8 12C6.9 12 6 11.1 6 10H10Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M18 10C18 11.1 17.1 12 16 12C14.9 12 14 11.1 14 10H18Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M14 4H10V10H14V4Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M17 4H20L22 10H18L17 4Z" fill="currentColor" />
-                                    <path opacity="0.3" d="M7 4H4L2 10H6L7 4Z" fill="currentColor" />
-                                    <path d="M6 10C6 11.1 5.1 12 4 12C2.9 12 2 11.1 2 10H6ZM10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10H10ZM18 10C18 11.1 18.9 12 20 12C21.1 12 22 11.1 22 10H18ZM19 2H5C4.4 2 4 2.4 4 3V4H20V3C20 2.4 19.6 2 19 2ZM12 17C12 16.4 11.6 16 11 16H6C5.4 16 5 16.4 5 17C5 17.6 5.4 18 6 18H11C11.6 18 12 17.6 12 17Z" fill="currentColor" />
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
                                 </svg>
                             </span>
-                            <!--end::Svg Icon-->Store</a>
+                            <!--end::Svg Icon-->İletişim Bilgileri</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -80,125 +97,77 @@
                     </li>
                     <!--end:::Tab item-->
                 </ul>
-                <!--end:::Tabs-->
-                <!--begin:::Tab content-->
                 <div class="tab-content" id="myTabContent">
-                    <!--begin:::Tab pane-->
                     <div class="tab-pane fade show active" id="kt_ecommerce_settings_general" role="tabpanel">
-                        <!--begin::Form-->
                         <form id="kt_ecommerce_settings_general_form" class="form" action="#">
-                            <!--begin::Heading-->
-                            <div class="row mb-7">
-                                <div class="col-md-9 offset-md-3">
-                                    <h2>General Settings</h2>
+                            <div class="row fv-row mb-7">
+                                <div class="col-md-3 text-md-end">
+                                    <label class="fs-6 fw-semibold form-label mt-3">
+                                        <span class="required">Logo</span>
+                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Site logosunu ayarlayın."></i>
+                                    </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="gorseller" id="logo" orakuploader="on"></div>
                                 </div>
                             </div>
-                            <!--end::Heading-->
-                            <!--begin::Input group-->
+                            <div class="row fv-row mb-7">
+                                <div class="col-md-3 text-md-end">
+                                    <label class="fs-6 fw-semibold form-label mt-3">
+                                        <span class="required">Favicon</span>
+                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Site favicon görselini ayarlayın"></i>
+                                    </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="gorseller2" id="favicon" orakuploader="on"></div>
+                                </div>
+                            </div>
+                            <div class="row fv-row mb-7">
+                                <div class="col-md-3 text-md-end">
+                                    <label class="fs-6 fw-semibold form-label mt-3">
+                                        <span class="required">Başlık</span>
+                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="SEO için site başlığını ayarlayın."></i>
+                                    </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control form-control-solid" name="site_title" value="" />
+                                </div>
+                            </div>
+                            <div class="row fv-row mb-7">
+                                <div class="col-md-3 text-md-end">
+                                    <label class="fs-6 fw-semibold form-label mt-3">
+                                        <span>Açıklama</span>
+                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="SEO için site açıklamasını ayarlayın."></i>
+                                    </label>
+                                </div>
+                                <div class="col-md-9">
+                                    <textarea class="form-control form-control-solid" name="site_description"></textarea>
+                                </div>
+                            </div>
                             <div class="row fv-row mb-7">
                                 <div class="col-md-3 text-md-end">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span class="required">Meta Title</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Set the title of the store for SEO."></i>
+                                        <span>Anahtar Kelime</span>
+                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="SEO için anahtar kelime ayarlayın."></i>
                                     </label>
                                     <!--end::Label-->
                                 </div>
                                 <div class="col-md-9">
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" name="meta_title" value="" />
+                                    <input type="text" class="form-control form-control-solid" name="site_keywords" value="" data-kt-ecommerce-settings-type="tagify" />
                                     <!--end::Input-->
                                 </div>
                             </div>
                             <!--end::Input group-->
                             <!--begin::Input group-->
-                            <div class="row fv-row mb-7">
-                                <div class="col-md-3 text-md-end">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span>Meta Tag Description</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Set the description of the store for SEO."></i>
-                                    </label>
-                                    <!--end::Label-->
-                                </div>
-                                <div class="col-md-9">
-                                    <!--begin::Input-->
-                                    <textarea class="form-control form-control-solid" name="meta_description"></textarea>
-                                    <!--end::Input-->
-                                </div>
-                            </div>
+
                             <!--end::Input group-->
                             <!--begin::Input group-->
-                            <div class="row fv-row mb-7">
-                                <div class="col-md-3 text-md-end">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span>Meta Keywords</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Set keywords for the store separated by a comma."></i>
-                                    </label>
-                                    <!--end::Label-->
-                                </div>
-                                <div class="col-md-9">
-                                    <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" name="meta_keywords" value="" data-kt-ecommerce-settings-type="tagify" />
-                                    <!--end::Input-->
-                                </div>
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row fv-row mb-7">
-                                <div class="col-md-3 text-md-end">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span>Theme</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Set theme style for the store."></i>
-                                    </label>
-                                    <!--end::Label-->
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="w-100">
-                                        <!--begin::Select2-->
-                                        <select class="form-select form-select-solid" name="theme" data-control="select2" data-hide-search="true" data-placeholder="Select a layout">
-                                            <option></option>
-                                            <option value="Default" selected="selected">Default</option>
-                                            <option value="Minimalist">Minimalist</option>
-                                            <option value="Dark">Dark</option>
-                                            <option value="High_Contrast">High Contrast</option>
-                                        </select>
-                                        <!--end::Select2-->
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row fv-row mb-7">
-                                <div class="col-md-3 text-md-end">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span>Default Layout</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Set default layout style for the store."></i>
-                                    </label>
-                                    <!--end::Label-->
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="w-100">
-                                        <!--begin::Select2-->
-                                        <select class="form-select form-select-solid" name="layout" data-control="select2" data-hide-search="true" data-placeholder="Select a layout">
-                                            <option></option>
-                                            <option value="Default" selected="selected">Default</option>
-                                            <option value="Electronics">Electronics</option>
-                                            <option value="Fashion">Fashion</option>
-                                            <option value="Home">Home</option>
-                                            <option value="Dining">Dining</option>
-                                            <option value="Interior">Interior</option>
-                                        </select>
-                                        <!--end::Select2-->
-                                    </div>
-                                </div>
-                            </div>
+
                             <!--end::Input group-->
                             <!--begin::Action buttons-->
-                            <div class="row py-5">
+                            <div class="row py-5 d-none">
                                 <div class="col-md-9 offset-md-3">
                                     <div class="d-flex">
                                         <!--begin::Button-->
@@ -1198,5 +1167,9 @@
     </div>
     <!--end::Content container-->
 </div>
-<?php  $this->view('admin/inc/footer'); ?>
+<?php $this->view('admin/inc/footer'); ?>
 <script src="<?= ADMIN_ASSETS ?>js/custom/apps/ecommerce/settings/settings.js"></script>
+<script>
+    orakuploader("logo", "<?= SITE_URL ?>", "logo", "Lütfen resim seçiniz!", "image/*", 1, []);
+    orakuploader("favicon", "<?= SITE_URL ?>", "logo", "Lütfen resim seçiniz!", "image/*", 1, []);
+</script>

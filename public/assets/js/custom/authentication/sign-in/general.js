@@ -123,11 +123,12 @@ var KTSigninGeneral = function() {
                     submitButton.disabled = false;
                                         
                     // Check axios library docs: https://axios-http.com/docs/intro 
-                    axios.post('/your/ajax/login/url', {
+                    axios.post(hostUrl + "auth/l", {
                         email: form.querySelector('[name="email"]').value, 
                         password: form.querySelector('[name="password"]').value 
                     }).then(function (response) {
-                        if (response) {
+                        var obj = JSON.parse(response);console.log(response);
+                        if (obj.status == "success") {
                             form.querySelector('[name="email"]').value= "";
                             form.querySelector('[name="password"]').value= "";  
 
@@ -183,8 +184,8 @@ var KTSigninGeneral = function() {
             submitButton = document.querySelector('#kt_sign_in_submit');
             
             handleValidation();
-            handleSubmitDemo(); // used for demo purposes only, if you use the below ajax version you can uncomment this one
-            //handleSubmitAjax(); // use for ajax submit
+            //handleSubmitDemo(); // used for demo purposes only, if you use the below ajax version you can uncomment this one
+            handleSubmitAjax(); // use for ajax submit
         }
     };
 }();

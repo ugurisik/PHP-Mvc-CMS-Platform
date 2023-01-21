@@ -67,7 +67,7 @@ Website: http://www.imeryazilim.com
 				<!--begin::Aside-->
 				<div class="d-flex flex-center flex-lg-start flex-column">
 					<!--begin::Logo-->
-					<a href="../../../index.html" class="mb-7">
+					<a href="<?= ADMIN_URL ?>" class="mb-7">
 						<img alt="Logo" src="<?= ADMIN_ASSETS ?>media/logos/custom-3.svg" />
 					</a>
 					<!--end::Logo-->
@@ -85,53 +85,31 @@ Website: http://www.imeryazilim.com
 					<!--begin::Card body-->
 					<div class="card-body p-10 p-lg-20">
 						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="/metronic8/demo38/../demo38/index.html" action="#">
+						<form class="form w-100" id="kt_sign_in_form">
 							<!--begin::Heading-->
 							<div class="text-center mb-11">
 								<!--begin::Title-->
-								<h1 class="text-dark fw-bolder mb-3">Sign In</h1>
+								<h1 class="text-dark fw-bolder mb-3">Yönetim Paneli</h1>
 								<!--end::Title-->
 								<!--begin::Subtitle-->
-								<div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+								<div class="text-gray-500 fw-semibold fs-6"><?php print_r($this->session->getAll()) ?></div>
 								<!--end::Subtitle=-->
 							</div>
 							<!--begin::Heading-->
 							<!--begin::Login options-->
-							<div class="row g-3 mb-9">
-								<!--begin::Col-->
-								<div class="col-md-6">
-									<!--begin::Google link=-->
-									<a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-										<img alt="Logo" src="<?= ADMIN_ASSETS ?>media/svg/brand-logos/google-icon.svg" class="h-15px me-3" />Sign in with Google</a>
-									<!--end::Google link=-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-md-6">
-									<!--begin::Google link=-->
-									<a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-										<img alt="Logo" src="<?= ADMIN_ASSETS ?>media/svg/brand-logos/apple-black.svg" class="theme-light-show h-15px me-3" />
-										<img alt="Logo" src="<?= ADMIN_ASSETS ?>media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show h-15px me-3" />Sign in with Apple</a>
-									<!--end::Google link=-->
-								</div>
-								<!--end::Col-->
-							</div>
 							<!--end::Login options-->
 							<!--begin::Separator-->
-							<div class="separator separator-content my-14">
-								<span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
-							</div>
 							<!--end::Separator-->
 							<!--begin::Input group=-->
 							<div class="fv-row mb-8">
 								<!--begin::Email-->
-								<input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" />
+								<input type="text" placeholder="Email" name="email" autocomplete="on" class="form-control bg-transparent" />
 								<!--end::Email-->
 							</div>
 							<!--end::Input group=-->
 							<div class="fv-row mb-3">
 								<!--begin::Password-->
-								<input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent" />
+								<input type="password" placeholder="Password" name="password" autocomplete="on" class="form-control bg-transparent" />
 								<!--end::Password-->
 							</div>
 							<!--end::Input group=-->
@@ -145,14 +123,8 @@ Website: http://www.imeryazilim.com
 							<!--end::Wrapper-->
 							<!--begin::Submit button-->
 							<div class="d-grid mb-10">
-								<button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-									<!--begin::Indicator label-->
-									<span class="indicator-label">Sign In</span>
-									<!--end::Indicator label-->
-									<!--begin::Indicator progress-->
-									<span class="indicator-progress">Please wait...
-										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-									<!--end::Indicator progress-->
+								<button type="button" name="girisButon" class="btn btn-primary">
+									Giriş Yap
 								</button>
 							</div>
 							<!--end::Submit button-->
@@ -175,17 +147,95 @@ Website: http://www.imeryazilim.com
 	<!--end::Root-->
 	<!--begin::Javascript-->
 	<script>
-		var hostUrl = "/metronic8/demo38/assets/";
+		var hostUrl = "<?= ADMIN_URL ?>";
 	</script>
 	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
 	<script src="<?= ADMIN_ASSETS ?>plugins/global/plugins.bundle.js"></script>
 	<script src="<?= ADMIN_ASSETS ?>js/scripts.bundle.js"></script>
 	<!--end::Global Javascript Bundle-->
 	<!--begin::Custom Javascript(used for this page only)-->
-	<script src="<?= ADMIN_ASSETS ?>js/custom/authentication/sign-in/general.js"></script>
+	<!-- <script src="<?= ADMIN_ASSETS ?>js/custom/authentication/sign-in/general.js"></script> -->
 	<!--end::Custom Javascript-->
 	<!--end::Javascript-->
+
+
 </body>
 <!--end::Body-->
 
 </html>
+<script>
+	var form = document.querySelector('#kt_sign_in_form');
+	validator = FormValidation.formValidation(
+		form, {
+			fields: {
+				'email': {
+					validators: {
+						regexp: {
+							regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+							message: 'Geçerli bir e-posta adresi giriniz',
+						},
+						notEmpty: {
+							message: 'E-Posta adresi zorunludur'
+						}
+					}
+				},
+				'password': {
+					validators: {
+						notEmpty: {
+							message: 'Şifre zorunludur'
+						}
+					}
+				}
+			},
+			plugins: {
+				trigger: new FormValidation.plugins.Trigger(),
+				bootstrap: new FormValidation.plugins.Bootstrap5({
+					rowSelector: '.fv-row',
+					eleInvalidClass: '', // comment to enable invalid state icons
+					eleValidClass: '' // comment to enable valid state icons
+				})
+			}
+		}
+	);
+	$(document).ready(() => {
+		$("button[name=girisButon]").on("click", () => {
+			validator.validate().then(function(status) {
+				if (status == "Valid") {
+					formdata = $("#kt_sign_in_form").serializeArray();
+					$.ajax({
+						url: "<?= ADMIN_URL ?>auth/l",
+						type: 'POST',
+						data: formdata,
+						success: function(e) {
+							//console.log(e);
+							console.log(e);
+							var obj = JSON.parse(e);
+							if (obj.type == "success") {
+								Swal.fire({
+									text: obj.message,
+									icon: obj.type,
+									confirmButtonText: "Tamam",
+								});
+								setTimeout(function() {
+									window.location.href = "<?= ADMIN_URL ?>";
+								}, 2000);
+							}else{
+								Swal.fire({
+									text: obj.message,
+									icon: obj.type,
+									confirmButtonText: "Tamam",
+								});
+							}
+						}
+					});
+				} else {
+					Swal.fire({
+						text: "Lütfen gerekli alanları doldurunuz!",
+						icon: "warning",
+						confirmButtonText: "Tamam",
+					});
+				}
+			});
+		});
+	});
+</script>

@@ -24,6 +24,7 @@ Website: http://www.imeryazilim.com
     <link href="<?= ADMIN_ASSETS ?>plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= ADMIN_ASSETS ?>plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= ADMIN_ASSETS ?>css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="<?= ADMIN_ASSETS ?>orakuploader/orakuploader.css" rel="stylesheet" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->

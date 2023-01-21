@@ -1,7 +1,7 @@
 <?php
 class logManager extends model
 {
-    public function createLog($transaction)
+    public function createLog($transaction, $userID=null)
     {
         $data = array(
             "Transaction" => $transaction,
@@ -9,7 +9,8 @@ class logManager extends model
             "userIP" => security::getIP(),
             "userOS" => security::getOS(),
             "userLang" => security::getLang(),
-            "userAgent" => security::getUserAgent()
+            "userAgent" => security::getUserAgent(),
+            "userID" => $userID
         );
         $this->db->insert("log", $data);
     }
