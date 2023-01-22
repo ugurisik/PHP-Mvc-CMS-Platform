@@ -28,15 +28,50 @@ var KTAppEcommerceSaveCategory = function () {
                 modules: {
                     toolbar: [
                         [{
-                            header: [1, 2, false]
+                            header: [1, 2, 3, 4, 5, 6, false]
                         }],
-                        ['bold', 'italic', 'underline'],
-                        ['image', 'code-block']
-                    ]
+                        [
+                            {
+                                size: [],
+                            },
+
+                            {
+                                font: [],
+                            }
+                        ],
+                        [
+                            {
+                                color: [],
+                            },
+                            {
+                                background: [],
+                            },
+                        ],
+                        [
+                            {
+                                align: [],
+                            },
+                        ],
+                        ['bold', 'italic', 'underline', 'strike', 'code-block', 'blockquote', 'clean'],
+                        [
+                            { list: "ordered" },
+                            { list: "bullet" },
+                            { indent: "-1" },
+                            { indent: "+1" },
+                        ],
+                        ['image', 'link', 'video',],
+
+                    ],
+                    clipboard: {
+                        // toggle to add extra line breaks when pasting HTML:
+                        matchVisual: false,
+                    },
                 },
-                placeholder: 'Type your text here...',
-                theme: 'snow' // or 'bubble'
+                placeholder: 'İçerik ...',
+                theme: 'snow', // or 'bubble'
+
             });
+           
         });
 
     }
@@ -64,26 +99,7 @@ var KTAppEcommerceSaveCategory = function () {
     }
 
     // Init form repeater --- more info: https://github.com/DubFriend/jquery.repeater
-    const initFormRepeater = () => {
-        $('#kt_ecommerce_add_category_conditions').repeater({
-            initEmpty: false,
 
-            defaultValues: {
-                'text-input': 'foo'
-            },
-
-            show: function () {
-                $(this).slideDown();
-
-                // Init select2 on new repeated items
-                initConditionsSelect2();
-            },
-
-            hide: function (deleteElement) {
-                $(this).slideUp(deleteElement);
-            }
-        });
-    }
 
     // Init condition select2
     const initConditionsSelect2 = () => {
@@ -152,7 +168,7 @@ var KTAppEcommerceSaveCategory = function () {
         // Init flatpickr --- more info: https://flatpickr.js.org/
         $('#kt_ecommerce_add_category_status_datepicker').flatpickr({
             enableTime: true,
-            dateFormat: "Y-m-d H:i",
+            dateFormat: "d-m-Y H:i",
         });
 
         const showDatepicker = () => {
@@ -270,7 +286,6 @@ var KTAppEcommerceSaveCategory = function () {
             // Init forms
             initQuill();
             initTagify();
-            initFormRepeater();
             initConditionsSelect2();
 
             // Handle forms

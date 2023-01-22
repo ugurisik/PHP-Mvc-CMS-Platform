@@ -169,7 +169,7 @@
                             <label class="form-label">Description</label>
                             <!--end::Label-->
                             <!--begin::Editor-->
-                            <div id="kt_ecommerce_add_category_description" name="kt_ecommerce_add_category_description" class="min-h-200px mb-2"></div>
+                            <div id="kt_ecommerce_add_category_description" name="kt_ecommerce_add_category_description" class="min-h-300px mb-2"></div>
                             <!--end::Editor-->
                             <!--begin::Description-->
                             <div class="text-muted fs-7">Set a description to the category for better visibility.</div>
@@ -210,7 +210,7 @@
                             <label class="form-label">Meta Tag Description</label>
                             <!--end::Label-->
                             <!--begin::Editor-->
-                            <div id="kt_ecommerce_add_category_meta_description" name="kt_ecommerce_add_category_meta_description" class="min-h-100px mb-2"></div>
+                            <div id="kt_ecommerce_add_category_meta_description" name="kt_ecommerce_add_category_meta_description" class="min-h-200px mb-2"></div>
                             <!--end::Editor-->
                             <!--begin::Description-->
                             <div class="text-muted fs-7">Set a meta tag description to the category for increased SEO ranking.</div>
