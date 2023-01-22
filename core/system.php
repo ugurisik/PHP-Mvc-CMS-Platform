@@ -48,11 +48,11 @@ class system
                 $this->method = $url[0];
                 array_shift($url);
             } else {
-                $error = ['error' => $url[0] . " Methodu Bulunamadı"];
-                require_once "app/views/errorPage.php";
-                exit;
+                // $error = ['error' => $url[0] . " Methodu Bulunamadı"];
+                // require_once "app/views/errorPage.php";
+                // exit;
                 //exit($url[0] . " Methodu Bulunamadı");
-                //$this->method = "index";
+                $this->method = "index";
             }
         }
        

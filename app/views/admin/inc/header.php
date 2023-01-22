@@ -342,7 +342,7 @@ Website: http://www.imeryazilim.com
                                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                     <span class="menu-link">
                                         <span class="menu-icon">
-                                            <i class="fonticon-app-store fs-2"></i>
+                                            <i class="fonticon-setting fs-2"></i>
                                         </span>
                                         <span class="menu-title">Ayarlar</span>
                                         <span class="menu-arrow"></span>

@@ -1,7 +1,7 @@
 <?php
 class categories extends controller
 {
-    public function index()
+    public function index($type)
     {
         $this->view('admin/inc/header', ['pageTitle' => 'Kategori Listesi']);
         $this->view('admin/categories/list');

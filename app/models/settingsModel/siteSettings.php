@@ -1,7 +1,7 @@
 <?php
 class siteSettings extends model
 {
-    public function add($data)
+    public function addData($data)
     {
         return $this->db->insert("settings", $data);
     }
@@ -14,14 +14,16 @@ class siteSettings extends model
         $this->db->where("id", $id);
         return $this->db->getOne("settings");
     }
-    public function getSettingsWLang($id)
+    public function getWhereConditions($where = [])
     {
-        $this->db->where("langID", $id);
-        return $this->db->getOne("settings");
+        foreach ($where as $key => $value) {
+            $this->db->where($key, $value);
+        }
+        return $this->db->get("settings");
     }
-    public function update($data, $id)
+    public function updateData($data, $langID)
     {
-        $this->db->where("id", $id);
+        $this->db->where("langID", $langID);
         return $this->db->update("settings", $data);
     }
     public function deleteData($langid)
