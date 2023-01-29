@@ -18,41 +18,10 @@
                     <!--end::Card header-->
                     <!--begin::Card body-->
                     <div class="card-body text-center pt-0">
-                        <!--begin::Image input-->
-                        <!--begin::Image input placeholder-->
-                        <style>
-                            .image-input-placeholder {
-                                background-image: url('<?= ADMIN_ASSETS ?>media/svg/files/blank-image.svg');
-                            }
-
-                            [data-theme="dark"] .image-input-placeholder {
-                                background-image: url('<?= ADMIN_ASSETS ?>media/svg/files/blank-image-dark.svg');
-                            }
-                        </style>
-                        <!--end::Image input placeholder-->
-                        <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3" data-kt-image-input="true">
-                            <!--begin::Preview existing avatar-->
-                            <div class="image-input-wrapper w-150px h-150px"></div>
-                            <!--end::Preview existing avatar-->
-                            <!--begin::Label-->
-                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                <i class="bi bi-pencil-fill fs-7"></i>
-                                <!--begin::Inputs-->
-                                <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                <input type="hidden" name="avatar_remove" />
-                                <!--end::Inputs-->
-                            </label>
-                            <!--end::Label-->
-                            <!--begin::Cancel-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Cancel-->
-                            <!--begin::Remove-->
-                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                                <i class="bi bi-x fs-2"></i>
-                            </span>
-                            <!--end::Remove-->
+                        <div class="row fv-row mb-7">
+                            <div class="col-md-12">
+                                <div class="gorseller" id="logo" orakuploader="on"></div>
+                            </div>
                         </div>
                         <!--end::Image input-->
                         <!--begin::Description-->
@@ -154,7 +123,7 @@
                         <label class="form-label d-block">Tags</label>
                         <!--end::Label-->
                         <!--begin::Input-->
-                        <input id="kt_ecommerce_add_product_tags" name="kt_ecommerce_add_product_tags" class="form-control mb-2" value="" />
+                        <input id="etiket" name="kt_ecommerce_add_product_tags" class="form-control mb-2" value="" />
                         <!--end::Input-->
                         <!--begin::Description-->
                         <div class="text-muted fs-7">Add tags to a product.</div>
@@ -265,11 +234,7 @@
                                     <div>
                                         <!--begin::Label-->
                                         <label class="form-label">Description</label>
-                                        <!--end::Label-->
-                                        <!--begin::Editor-->
-                                        <div id="kt_ecommerce_add_product_description" name="kt_ecommerce_add_product_description" class="min-h-200px mb-2"></div>
-                                        <!--end::Editor-->
-                                        <!--begin::Description-->
+                                        <textarea class="form-control tynmcearea" name=""></textarea>
                                         <div class="text-muted fs-7">Set a description to the product for better visibility.</div>
                                         <!--end::Description-->
                                     </div>
@@ -290,23 +255,10 @@
                                 <!--begin::Card body-->
                                 <div class="card-body pt-0">
                                     <!--begin::Input group-->
-                                    <div class="fv-row mb-2">
-                                        <!--begin::Dropzone-->
-                                        <div class="dropzone" id="kt_ecommerce_add_product_media">
-                                            <!--begin::Message-->
-                                            <div class="dz-message needsclick">
-                                                <!--begin::Icon-->
-                                                <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
-                                                <!--end::Icon-->
-                                                <!--begin::Info-->
-                                                <div class="ms-4">
-                                                    <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                    <span class="fs-7 fw-semibold text-gray-400">Upload up to 10 files</span>
-                                                </div>
-                                                <!--end::Info-->
-                                            </div>
+                                    <div class="row fv-row mb-7">
+                                        <div class="col-md-12">
+                                            <div class="gorseller" id="medias" orakuploader="on"></div>
                                         </div>
-                                        <!--end::Dropzone-->
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Description-->
@@ -719,7 +671,7 @@
                                         <label class="form-label">Meta Tag Description</label>
                                         <!--end::Label-->
                                         <!--begin::Editor-->
-                                        <div id="kt_ecommerce_add_product_meta_description" name="kt_ecommerce_add_product_meta_description" class="min-h-100px mb-2"></div>
+                                        <textarea name="" class="form-control tynmceareaa" cols="30" rows="10"></textarea>
                                         <!--end::Editor-->
                                         <!--begin::Description-->
                                         <div class="text-muted fs-7">Set a meta tag description to the product for increased SEO ranking.</div>
@@ -732,7 +684,7 @@
                                         <label class="form-label">Meta Tag Keywords</label>
                                         <!--end::Label-->
                                         <!--begin::Editor-->
-                                        <input id="kt_ecommerce_add_product_meta_keywords" name="kt_ecommerce_add_product_meta_keywords" class="form-control mb-2" />
+                                        <input id="keywords" name="kt_ecommerce_add_product_meta_keywords" class="form-control mb-2" />
                                         <!--end::Editor-->
                                         <!--begin::Description-->
                                         <div class="text-muted fs-7">Set a list of keywords that the product is related to. Separate the keywords by adding a comma
@@ -770,4 +722,11 @@
     <!--end::Content container-->
 </div>
 <?php $this->view('admin/inc/footer'); ?>
-<script src="<?= ADMIN_ASSETS ?>js/custom/apps/ecommerce/catalog/save-product.js"></script>
+<script>
+    $(document).ready(function() {
+        orakuploader("medias", "<?= SITE_URL ?>", "product", "Lütfen resim seçiniz!", "image/*", 0, ["<?= SITE_URL . $param['data']['logo'] ?>"]);
+        orakuploader("logo", "<?= SITE_URL ?>", "logo", "Lütfen resim seçiniz!", "image/*", 0, ["<?= SITE_URL . $param['data']['logo'] ?>"]);
+        tagify("etiket");
+        tagify("keywords");
+    });
+</script>

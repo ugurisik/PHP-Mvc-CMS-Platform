@@ -59,6 +59,7 @@
 <!--begin::Vendors Javascript(used for this page only)-->
 <script src="<?= ADMIN_ASSETS ?>plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
 <script src="<?= ADMIN_ASSETS ?>plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="<?= ADMIN_ASSETS ?>plugins/custom/tinymce/tinymce.min.js"></script>
 <!--end::Vendors Javascript-->
 <!--begin::Custom Javascript(used for this page only)-->
 <script src="<?= ADMIN_ASSETS ?>js/widgets.bundle.js"></script>
