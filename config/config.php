@@ -1,8 +1,8 @@
 <?php
 
 define("CONTROLLERS_PATH", "app/controllers");
-define("SITE_URL", "http://localhost:8888/panel/");
-define("ADMIN_URL", "http://localhost:8888/panel/admincp/");
+define("SITE_URL", "http://localhost:8888/panel/PHP-Mvc-CMS-Platform/");
+define("ADMIN_URL", "http://localhost:8888/panel/PHP-Mvc-CMS-Platform/admincp/");
 
 define("VIEWS_PATH", "app/views");
 define("MODELS_PATH", "app/models");
