@@ -327,7 +327,7 @@ Website: http://www.imeryazilim.com
                                 <!--begin::Menu Item-->
                                 <div class="menu-item">
                                     <!--begin::Menu link-->
-                                    <a class="menu-link" href="index.php">
+                                    <a class="menu-link" href="<?= ADMIN_URL ?>">
                                         <!--begin::Bullet-->
                                         <span class="menu-icon">
                                             <i class="fonticon-house fs-2"></i>

@@ -49,3 +49,8 @@ class settings extends controller
         print_r(json_encode($data, JSON_UNESCAPED_UNICODE));
     }
 }
+
+
+
+
+

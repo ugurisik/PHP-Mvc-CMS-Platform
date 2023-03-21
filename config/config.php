@@ -18,8 +18,8 @@ define("API_CONTROLLERS_PATH", "app/controllers/api");
 
 define("DB_HOST", "localhost");
 define("DB_NAME", "panel");
-define("DB_USERNAME", "panel");
-define("DB_PASSWORD", "K3dk9sz3.!");
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "root");
 define("DB_PREFIX", "imer_");
 define("DB_PORT", "8889");
 
